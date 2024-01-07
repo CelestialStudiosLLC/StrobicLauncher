@@ -1,13 +1,13 @@
 {
   "name": "strobiclauncher",
-  "version": "2.1.4",
-  "productName": "strobic Launcher",
+  "version": "2.2.1",
+  "productName": "Strobic Launcher",
   "description": "Modded Minecraft Launcher",
   "author": "Codixer",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/CelLauncher/CelestialLauncher",
+  "homepage": "https://github.com/CelestialStudiosLLC/StrobicLauncher",
   "bugs": {
-    "url": "https://github.com/CelLauncher/CelestialLauncher/issues"
+    "url": "https://github.com/CelestialStudiosLLC/StrobicLauncher/issues"
   },
   "private": true,
   "main": "index.js",
@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CelLauncher/CelestialLauncher.git"
+    "url": "git+https://github.com/CelestialStudiosLLC/StrobicLauncher.git"
   }
 }

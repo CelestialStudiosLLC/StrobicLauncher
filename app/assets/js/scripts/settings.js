@@ -343,13 +343,13 @@ const msftLoginLogger = LoggerUtil.getLogger('Microsoft Login')
 const msftLogoutLogger = LoggerUtil.getLogger('Microsoft Logout')
 
 // Bind the add mojang account button.
-document.getElementById('settingsAddMojangAccount').onclick = (e) => {
-    switchView(getCurrentView(), VIEWS.login, 500, 500, () => {
-        loginViewOnCancel = VIEWS.settings
-        loginViewOnSuccess = VIEWS.settings
-        loginCancelEnabled(true)
-    })
-}
+// document.getElementById('settingsAddMojangAccount').onclick = (e) => {
+//     switchView(getCurrentView(), VIEWS.login, 500, 500, () => {
+//         loginViewOnCancel = VIEWS.settings
+//         loginViewOnSuccess = VIEWS.settings
+//         loginCancelEnabled(true)
+//     })
+// }
 
 // Bind the add microsoft account button.
 document.getElementById('settingsAddMicrosoftAccount').onclick = (e) => {
@@ -633,7 +633,7 @@ function populateAuthAccounts(){
     const selectedUUID = ConfigManager.getSelectedAccount().uuid
 
     let microsoftAuthAccountStr = ''
-    let mojangAuthAccountStr = ''
+    // let mojangAuthAccountStr = ''
 
     authKeys.forEach((val) => {
         const acc = authAccounts[val]
@@ -664,14 +664,15 @@ function populateAuthAccounts(){
 
         if(acc.type === 'microsoft') {
             microsoftAuthAccountStr += accHtml
-        } else {
-            mojangAuthAccountStr += accHtml
-        }
+         } 
+        //else {
+        //     mojangAuthAccountStr += accHtml
+        // }
 
     })
 
     settingsCurrentMicrosoftAccounts.innerHTML = microsoftAuthAccountStr
-    settingsCurrentMojangAccounts.innerHTML = mojangAuthAccountStr
+    //settingsCurrentMojangAccounts.innerHTML = mojangAuthAccountStr
 }
 
 /**
@@ -1453,7 +1454,7 @@ function populateAboutVersionInformation(){
  */
 function populateReleaseNotes(){
     $.ajax({
-        url: 'https://github.com/CelLauncher/CelestialLauncher/releases.atom',
+        url: 'https://github.com/CelestialStudiosLLC/StrobicLauncher/releases.atom',
         success: (data) => {
             const version = 'v' + remote.app.getVersion()
             const entries = $(data).find('entry')

@@ -29,33 +29,33 @@ const log = LoggerUtil.getLogger('AuthManager')
  * @param {string} password The account password.
  * @returns {Promise.<Object>} Promise which resolves the resolved authenticated account object.
  */
-exports.addMojangAccount = async function(username, password) {
-    try {
-        const response = await MojangRestAPI.authenticate(username, password, ConfigManager.getClientToken())
-        console.log(response)
-        if(response.responseStatus === RestResponseStatus.SUCCESS) {
+// exports.addMojangAccount = async function(username, password) {
+//     try {
+//         const response = await MojangRestAPI.authenticate(username, password, ConfigManager.getClientToken())
+//         console.log(response)
+//         if(response.responseStatus === RestResponseStatus.SUCCESS) {
 
-            const session = response.data
-            if(session.selectedProfile != null){
-                const ret = ConfigManager.addMojangAuthAccount(session.selectedProfile.id, session.accessToken, username, session.selectedProfile.name)
-                if(ConfigManager.getClientToken() == null){
-                    ConfigManager.setClientToken(session.clientToken)
-                }
-                ConfigManager.save()
-                return ret
-            } else {
-                return Promise.reject(mojangErrorDisplayable(MojangErrorCode.ERROR_NOT_PAID))
-            }
+//             const session = response.data
+//             if(session.selectedProfile != null){
+//                 const ret = ConfigManager.addMojangAuthAccount(session.selectedProfile.id, session.accessToken, username, session.selectedProfile.name)
+//                 if(ConfigManager.getClientToken() == null){
+//                     ConfigManager.setClientToken(session.clientToken)
+//                 }
+//                 ConfigManager.save()
+//                 return ret
+//             } else {
+//                 return Promise.reject(mojangErrorDisplayable(MojangErrorCode.ERROR_NOT_PAID))
+//             }
 
-        } else {
-            return Promise.reject(mojangErrorDisplayable(response.mojangErrorCode))
-        }
+//         } else {
+//             return Promise.reject(mojangErrorDisplayable(response.mojangErrorCode))
+//         }
         
-    } catch (err){
-        log.error(err)
-        return Promise.reject(mojangErrorDisplayable(MojangErrorCode.UNKNOWN))
-    }
-}
+//     } catch (err){
+//         log.error(err)
+//         return Promise.reject(mojangErrorDisplayable(MojangErrorCode.UNKNOWN))
+//     }
+// }
 
 const AUTH_MODE = { FULL: 0, MS_REFRESH: 1, MC_REFRESH: 2 }
 

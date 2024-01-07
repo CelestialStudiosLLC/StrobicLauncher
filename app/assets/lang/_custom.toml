@@ -4,17 +4,17 @@
 title = "Strobic Launcher"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/CelLauncher/CelestialLauncher"
-mediaTwitterURL = "#"
-mediaInstagramURL = "#"
-mediaYouTubeURL = "#"
-mediaDiscordURL = "https://discord.gg/zNWUXdt"
+mediaGitHubURL = "https://github.com/CelestialStudiosLLC/StrobicLauncher"
+mediaTwitterURL = "https://twitter.com/CelestialStud"
+mediaInstagramURL = "http://instagram.com/"
+mediaYouTubeURL = "https://www.youtube.com/@CelestialStud"
+mediaDiscordURL = "https://discord.gg/strobic"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/CelLauncher/CelestialLauncher"
-supportLink = "https://github.com/CelLauncher/CelestialLauncher/issues"
+sourceGithubLink = "https://github.com/CelestialStudiosLLC/StrobicLauncher"
+supportLink = "https://github.com/CelestialStudiosLLC/StrobicLauncher/issues"
 
 [ejs.welcome]
-welcomeHeader = "WELCOME TO STROBIC ORIGINS"
-welcomeDescription = "Remind me to type something here for your server, or rather... Send me something."
-welcomeDescCTA = "Now click below to authenticate ya wanka"
+welcomeHeader = "Welcome to StrobicTV!"
+welcomeDescription = "Home of the best Modded Minecraft Network on the platform."
+welcomeDescCTA = "Click below to login!"
