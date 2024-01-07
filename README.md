@@ -1,6 +1,6 @@
 <p align="center"><img src="./app/assets/images/logo.webp" width="150px" height="150px" alt="aventium softworks"></p>
 
-<h1 align="center">Celestial Launcher</h1>
+<h1 align="center">Strobic Launcher</h1>
 
 <em><h5 align="center">(formerly Electron Launcher)</h5></em>
 

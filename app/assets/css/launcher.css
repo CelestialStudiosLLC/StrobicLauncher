@@ -1192,7 +1192,7 @@ body, button {
     overflow-y: auto;
 }
 .settingsTab::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
 }
 .settingsTab::-webkit-scrollbar-track {
     display: none;
@@ -1932,7 +1932,7 @@ input:checked + .toggleSwitchSlider:before {
     display: none;
 }
 .settingsSelectOptions::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
 }
 .settingsSelectOptions::-webkit-scrollbar-track {
     display: none;
@@ -2694,7 +2694,7 @@ input:checked + .toggleSwitchSlider:before {
     color: rgba(165, 165, 165, 0.75);
 }
 #newsArticleContentScrollable::-webkit-scrollbar {
-    width: 2px;
+    width: 8px;
 }
 #newsArticleContentScrollable::-webkit-scrollbar-track {
     display: none;

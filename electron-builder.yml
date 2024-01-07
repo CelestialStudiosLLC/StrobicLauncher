@@ -1,6 +1,6 @@
-appId: 'celestiallauncher'
-productName: 'Celestial Launcher'
-artifactName: '${productName}-setup-${version}.${ext}'
+appId: 'strobiclauncher'
+productName: 'Strobic Launcher'
+artifactName: '${productName}-${version}.${ext}'
 
 copyright: 'Copyright © 2018-2023 Codixer'
 
@@ -22,9 +22,10 @@ win:
 # Windows Installer Configuration
 nsis:
   oneClick: false
-  perMachine: false
+  perMachine: true
   allowElevation: true
   allowToChangeInstallationDirectory: true
+  menuCategory: "StrobicTV"
 
 # macOS Configuration
 mac:
