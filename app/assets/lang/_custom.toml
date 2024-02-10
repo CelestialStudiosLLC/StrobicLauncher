@@ -4,10 +4,10 @@
 title = "Strobic Launcher"
 
 [ejs.landing]
-mediaGitHubURL = "https://github.com/CelestialStudiosLLC/StrobicLauncher"
-mediaTwitterURL = "https://twitter.com/CelestialStud"
-mediaInstagramURL = "http://instagram.com/"
-mediaYouTubeURL = "https://www.youtube.com/@CelestialStud"
+mediaWebsiteURL = "https://www.strobictv.net/"
+mediaTwitterURL = "https://twitter.com/strobictv"
+mediaInstagramURL = "https://www.instagram.com/strobictelevision/"
+mediaYouTubeURL = "https://www.youtube.com/@strobictv"
 mediaDiscordURL = "https://discord.gg/strobic"
 
 [ejs.settings]
