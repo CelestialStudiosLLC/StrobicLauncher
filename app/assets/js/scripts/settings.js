@@ -354,7 +354,7 @@ const msftLogoutLogger = LoggerUtil.getLogger('Microsoft Logout')
 // Bind the add microsoft account button.
 document.getElementById('settingsAddMicrosoftAccount').onclick = (e) => {
     switchView(getCurrentView(), VIEWS.waiting, 500, 500, () => {
-        ipcRenderer.send(MSFT_OPCODE.OPEN_LOGIN, VIEWS.settings, VIEWS.settings)
+        ipcRenderer.send(MSFT_OPCODE.OPEN_LOGIN, VIEWS.landing, VIEWS.settings)
     })
 }
 
@@ -406,7 +406,8 @@ ipcRenderer.on(MSFT_OPCODE.REPLY_LOGIN, (_, ...arguments_) => {
                 setOverlayHandler(() => {
                     toggleOverlay(false)
                 })
-                toggleOverlay(true)
+                if (errorDesc !== "The user has denied access to the scope requested by the client application.") toggleOverlay(true) 
+                //If the user clicks "Back" button and closes the window
 
             })
         } else {
@@ -526,16 +527,16 @@ function processLogOut(val, isLastAccount){
                 updateSelectedAccount(selAcc)
                 validateSelectedAccount()
             }
-            if(isLastAccount) {
-                loginOptionsCancelEnabled(false)
-                loginOptionsViewOnLoginSuccess = VIEWS.settings
-                loginOptionsViewOnLoginCancel = VIEWS.loginOptions
-                switchView(getCurrentView(), VIEWS.loginOptions)
-            }
+            $(parent).fadeOut(250, () => {
+                parent.remove()
+            })
         })
-        $(parent).fadeOut(250, () => {
-            parent.remove()
-        })
+        if (isLastAccount) {
+            loginOptionsCancelEnabled(false)
+            loginOptionsViewOnLoginSuccess = VIEWS.landing
+            loginOptionsViewOnLoginCancel = VIEWS.loginOptions
+            switchView(getCurrentView(), VIEWS.loginOptions)
+        }
     }
 }
 
